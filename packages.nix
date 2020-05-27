@@ -1,0 +1,143 @@
+{ pkgs, ... }:
+
+{
+  environment.systemPackages =
+
+    with pkgs; [
+      appimage-run
+      arandr
+      atool
+      autocutsel
+      automake
+      bfg-repo-cleaner
+      bind
+      binutils-unwrapped
+      blueman
+      bup
+      chromium
+      cifs-utils
+      cloc
+      conda
+      curl
+      dmidecode
+      docker
+      dos2unix
+      dunst
+      emacs
+      entr
+      espeak
+      evince
+      exa
+      exif
+      fd
+      feh
+      ffmpeg
+      file
+      firefox
+      fzf
+      galculator
+      gcc
+      geeqie
+      gimp
+      gitAndTools.gitFull
+      gnome3.dconf
+      gnome3.gnome_keyring
+      gnupg
+      gradle
+      htop
+      i3lock-fancy
+      imagemagick
+      inkscape
+      ispell
+      khal
+      khard
+      kitty
+      libnotify
+      libreoffice
+      libsForQt5.vlc
+      light
+      linuxPackages.virtualboxGuestAdditions
+      lm_sensors
+      lsof
+      magic-wormhole
+      meld
+      mpv
+      mu
+      neomutt
+      neovim
+      nethogs
+      networkmanagerapplet
+      nitrogen
+      nixfmt
+      nix-prefetch-git
+      nmap
+      ntfs3g
+      numlockx
+      offlineimap
+      openconnect
+      par2cmdline
+      pass
+      pavucontrol
+      pciutils
+      pdftk
+      perlPackages.WWWYoutubeViewer
+      pipenv
+      (polybar.override {
+        i3Support = true;
+        pulseSupport = true;
+      })
+      poppler_utils
+      powertop
+      psmisc
+      pv
+      (python3.withPackages (ps:
+        with ps; [
+          keyring
+          python-language-server
+          pyls-mypy
+          pyls-isort
+          pyls-black
+        ]))
+      R
+      ranger
+      ripgrep
+      rstudio
+      scrot
+      shellcheck
+      signal-desktop
+      silver-searcher
+      smartmontools
+      spotify
+      stow
+      streamlink
+      sublime3
+      sxiv
+      tdesktop
+      texlive.combined.scheme-full
+      tig
+      tldr
+      tmux
+      tor-browser-bundle-bin
+      tree
+      udiskie
+      unzip
+      upower
+      urlscan
+      usbutils
+      vdirsyncer
+      vim
+      w3m
+      wget
+      woeusb
+      xclip
+      xmagnify
+      xorg.xev
+      xorg.xmodmap
+      xorg.xrandr
+      xournal
+      youtube-dl
+      zathura
+      zip
+    ];
+}
+
