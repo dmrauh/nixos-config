@@ -33,6 +33,8 @@
     kernelPackages = pkgs.linuxPackages_latest;
   };
 
+  documentation.dev.enable = true;
+
   networking = {
     hostName = "oc215";
     networkmanager.enable = true;
@@ -121,9 +123,9 @@
     cron = {
       enable = true;
       systemCronJobs = [
-        "*/3 * * * * dmrauh $HOME/bin/mailman"
-        "*/3 * * * * dmrauh $HOME/bin/mailindexer"
-        "*/3 * * * * dmrauh ${pkgs.vdirsyncer}/bin/vdirsyncer sync"
+        "*/5 * * * * dmrauh $HOME/bin/mailman"
+        "*/5 * * * * dmrauh $HOME/bin/mailindexer"
+        "*/5 * * * * dmrauh ${pkgs.vdirsyncer}/bin/vdirsyncer sync"
       ];
     };
 
@@ -136,7 +138,7 @@
 
     printing = {
       enable = true;
-      drivers = with pkgs; [ gutenprint postscript-lexmark ];
+      drivers = with pkgs; [ brlaser gutenprint postscript-lexmark ];
     };
 
     udev = {
