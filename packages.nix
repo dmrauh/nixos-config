@@ -44,6 +44,7 @@
       gnome3.gnome_keyring
       gnupg
       gradle
+      hexdump
       htop
       i3lock-fancy
       imagemagick
@@ -59,7 +60,9 @@
       linuxPackages.virtualboxGuestAdditions
       lm_sensors
       lsof
+      ltrace
       magic-wormhole
+      manpages
       meld
       mpv
       mu
@@ -90,13 +93,15 @@
       powertop
       psmisc
       pv
+      pwndbg
+      python3Packages.keyring
+      python3Packages.python-language-server
       (python3.withPackages (ps:
         with ps; [
-          keyring
-          python-language-server
+          binwalk
+          matplotlib
           pyls-mypy
           pyls-isort
-          pyls-black
         ]))
       R
       ranger
@@ -109,6 +114,7 @@
       smartmontools
       spotify
       stow
+      strace
       streamlink
       sublime3
       sxiv
